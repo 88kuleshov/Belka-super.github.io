@@ -851,6 +851,7 @@ textarea {
 }
 .media a:hover {
     cursor: pointer;
+    color: rgb(0, 224, 208);
 }
 .soc-media {
     width: 300px;

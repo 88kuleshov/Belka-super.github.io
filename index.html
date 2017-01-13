@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <title>onelist</title>
     <link rel="stylesheet" type="text/css" href="onelist.css" />
-    <script src="http://code.jquery.com/jquery-2.1.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+     <script type="text/javascript">
+       google.load("jquery", "1.11.0");
+         google.setOnLoadCallback(jQueryIsLoaded);
+          function jQueryIsLoaded() {
+             alert('jQuery от Google загружен');
+            }
+                  if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='/js/jquery-1.11.0.min.js' type='text/javascript'%3E%3C/script%3E"));
+            }
+      </script>
 </head>
 <body>
 <div class="main">

@@ -649,8 +649,8 @@ body {
     font-size: 14px;
     font-family: "Roboto", serif;
     border-color: rgba(65, 61, 75, 0.502);
-    border-width:2px;
-    border-style:inset;
+    border-width:1px;
+    border-style:solid;
 }
 
 
@@ -664,8 +664,8 @@ textarea {
     font-family: "Roboto";
     resize: none;
     border-color: rgba(65, 61, 75, 0.502);
-    border-width:2px;
-    border-style:inset;
+    border-width:1px;
+    border-style:solid;
 }
 .reg-input input[type="submit"] {
     width: 120px;

@@ -204,7 +204,6 @@ body {
 .video {
     max-width: 1600px;
     margin: auto;
-    border: 1px solid blueviolet;
     height: 550px;
     background: url("img/city.png") no-repeat;
 }
@@ -298,7 +297,7 @@ body {
 }
 
 .img-table-two {
-    background: url("img/two-icon.png") center no-repeat;
+    background: url("img/two-ICON.png") center no-repeat;
     height: 81px;
     margin-bottom: 15px;
 }
@@ -334,8 +333,8 @@ body {
 .contain-team {
     width: 940px;
     margin: auto;
-    opacity: 0.851;
     background: rgb(49, 29, 94) linear-gradient(to right, rgb(9, 5, 47), rgb(49, 29, 94));
+    opacity: 1;
 }
 .contain-text-team {
     text-align: center;
@@ -473,19 +472,17 @@ body {
     border-collapse: collapse;
 }
 .works tr {
-    height: 200px;
+    height: 195px;
 }
 .works th {
     width: calc(100%/6);
     cursor: pointer;
-    border-right: 1px solid gray;
-    border-bottom:1px solid gray ;
+
 }
 .works th a {
     width: 100px;
     height: 100px;
     cursor: pointer;
-    background: url("img/logo-tajam.png") center no-repeat;
 }
 
 .reviews {

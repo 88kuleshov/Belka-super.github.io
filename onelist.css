@@ -662,6 +662,8 @@ textarea {
     font-family: "Roboto";
     resize: none;
     border-color: rgba(65, 61, 75, 0.502);
+    border-width:2px;
+    border-style:inset;
 }
 .reg-input input[type="submit"] {
     width: 120px;

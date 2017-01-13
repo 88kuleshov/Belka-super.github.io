@@ -15,8 +15,7 @@ body {
     width: 100%;
     height: 670px;
     margin: auto;
-    opacity: 0.851;
-    background: rgb(49, 29, 94) linear-gradient(to right, rgb(9, 5, 47), rgb(49, 29, 94));
+    background: rgba(49, 29, 94, 0.651) linear-gradient(to right, rgba(9, 5, 47, 0.651), rgba(49, 29, 94, 0.651));
 
 }
 
@@ -122,7 +121,7 @@ body {
     width: 50px;
     margin:auto;
     padding: 30px;
-    background: url("img/Separator.png") center no-repeat;
+    background: url("img/separator.png") center no-repeat;
 }
 .heads-center {
     width: 772px;
@@ -135,7 +134,7 @@ body {
 }
 .center-button {
     position: relative;
-    top: 55px;
+    top: 70px;
     font-size: 15px;
     color: rgb(0, 224, 208);
     text-align: center;
@@ -266,7 +265,7 @@ body {
 }
 .container-two .contain-text .separator {
     padding-bottom: 0;
-    background: url("img/Separator-gray.png") center no-repeat;
+    background: url("img/separator-gray.png") center no-repeat;
     opacity: 1;
 }
 .contain-expertize {
@@ -332,8 +331,6 @@ body {
 .contain-team {
     width: 940px;
     margin: auto;
-    background: rgb(49, 29, 94) linear-gradient(to right, rgb(9, 5, 47), rgb(49, 29, 94));
-    opacity: 1;
 }
 .contain-text-team {
     text-align: center;
@@ -374,16 +371,17 @@ body {
 }
 
 .spec{
-    display: inline-block;
-    width: 218px;
+    float:left;
+    width: 220px;
     height: 100%;
-    margin-right: 11px;
+    margin-right: 15px;
     border: 1px solid gray;
     color: rgb(255, 255, 255);
 
 }
 .spec:last-child {
-    margin-right: 0;
+    margin-right: 3px;
+    float:right;
 }
 .photo-spec-1 {
     height: 230px;
@@ -534,32 +532,31 @@ body {
 .foto-links {
     list-style-type: none;
     padding: 0;
-    width: 325px;
     height: 70px;
     margin: 0;
     float: left;
 }
 .foto-links li {
     display: block;
-    margin-right: 13px;
-    width: 50px;
+    margin-right: 15px;
+    width: 60px;
     float: left;
-    height: 50px;
+    height: 60px;
     margin-top: 10px;
 }
-.foto-links li:first-child {
+/*.foto-links li:first-child {
     display: block;
     margin-right: 13px;
     width: 50px;
     float: left;
     height: 50px;
     margin-top: 10px;
-}
+}*/
 .foto-links li:last-child {
     display: block;
-    width: 50px;
+    width: 60px;
     float: left;
-    height: 50px;
+    height: 60px;
     margin-top: 10px;
     margin-right: 0;
 }
@@ -567,9 +564,9 @@ body {
     display: block;
     margin-right: 13px;
     margin-top: 0;
-    width: 70px;
+    width: 80px;
     float: left;
-    height: 70px;
+    height: 80px;
 }
 .foto-links li.active:last-child{
     display: block;
@@ -657,13 +654,14 @@ body {
 
 
 textarea {
-    width: 450px;
+    width: 448px;
     padding-left: 20px;
     padding-top: 10px;
     margin-bottom: 20px;
     color:rgba(65, 61, 75, 0.502);
     font-size: 14px;
     font-family: "Roboto";
+    resize: none;
 }
 .reg-input input[type="submit"] {
     width: 120px;

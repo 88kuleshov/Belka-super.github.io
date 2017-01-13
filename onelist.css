@@ -319,7 +319,7 @@ body {
     margin-bottom: 15px;
 }
 .contain-text .separator {
-    background: url(img/separator-gray.png) center no-repeat;
+    background: url("img/Separator-gray.png") center no-repeat;
 }
 .block-team {
     max-width: 1600px;
@@ -648,9 +648,6 @@ body {
     color:rgba(65, 61, 75, 0.502);
     font-size: 14px;
     font-family: "Roboto", serif;
-    border-color: rgba(65, 61, 75, 0.502);
-    border-width:1px;
-    border-style:solid;
 }
 
 
@@ -664,8 +661,6 @@ textarea {
     font-family: "Roboto";
     resize: none;
     border-color: rgba(65, 61, 75, 0.502);
-    border-width:1px;
-    border-style:solid;
 }
 .reg-input input[type="submit"] {
     width: 120px;

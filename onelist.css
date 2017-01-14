@@ -436,6 +436,7 @@ body {
     max-width: 1600px;
     margin: auto;
     height: 735px;
+    overflow:hidden;
 }
 .contain-text-works{
     margin: auto;
@@ -483,10 +484,10 @@ body {
     cursor: pointer;
     padding:0;
 }
-/*.works th img {
-    height: auto;
+.works th img {
+    max-height: 200px;
 
-}*/
+}
 
 .reviews {
     max-width: 1600px;

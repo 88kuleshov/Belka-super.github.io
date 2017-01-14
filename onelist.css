@@ -439,14 +439,14 @@ body {
 }
 .contain-text-works{
     margin: auto;
-    width: 940px;
-    height: 160px;
+    max-width: 940px;
+    max-height: 160px;
     text-align: left;
 }
 .contain-img-works {
     max-width: 1600px;
     margin: auto;
-    height: 400px;
+    max-height: 400px;
 }
 .contain-text-works .header-serif {
     display: inline-block;
@@ -466,29 +466,32 @@ body {
 }
 .works {
     max-width: 100%;
+    min-width: 156px;
     max-height: 100%;
     border-collapse: collapse;
     line-height:0;
+    table-layout: fixed;
 
 
 }
-/*.works tr {
-    height: 195px;
-     border-spacing: 0;
-}*/
+.works tr {
+    max-width: calc(100%/6);
+    max-height: calc(100%/2);
+}
 .works th {
-    width: calc(100%/6);
+    max-width: calc(100%/6);
+    max-height: calc(100%/2);
     cursor: pointer;
     padding:0;
 
 
 
 }
-.works th a {
+/*.works th a {
     width: 100px;
     height: 100px;
     cursor: pointer;
-}
+}*/
 
 .reviews {
     max-width: 1600px;

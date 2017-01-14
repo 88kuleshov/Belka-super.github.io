@@ -186,7 +186,7 @@
                 <div class="header-serif">our works</div>
                 <div class="center-text">See all project in dribble ></div>
             </div>
-            <div class="contain-img-works">
+            <div class="contain-img-works" id="works-box">
                 <table class="works">
                     <tr >
                         <th><img src="img/tajam/work-1.png"  height=100% width=100%></th>
@@ -323,44 +323,56 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-        $(".slider").each(function () {// обрабатываем каждый слайдер
-            var param = $(this);
-            (param).append("<div class='nav'></div>");
-            (param).find(".header-p").each(function () {
-                (param).find(".nav").append("<span rel='"+$(this).index()+"'></span>"); // добавляем блок навигации
-                $(this).addClass(".slider"+$(this).index());
+            $(".slider").each(function () {// обрабатываем каждый слайдер
+                var param = $(this);
+                (param).append("<div class='nav'></div>");
+                (param).find(".header-p").each(function () {
+                    (param).find(".nav").append("<span rel='"+$(this).index()+"'></span>"); // добавляем блок навигации
+                    $(this).addClass(".slider"+$(this).index());
+                });
+                (param).find("span").first().addClass("on"); // делаем активным первый элемент меню
             });
-            (param).find("span").first().addClass("on"); // делаем активным первый элемент меню
+            $(".foto-spec").hover(function (){
+                var foto = $(this); //переменная с фоткой
+                var cor = foto.index(); //создаем кореляцию по номерам
+                var box_text = $(".comment-text:eq("+cor+")");//выводим текст по номеру foto
+
+                if (foto.hasClass("active"))// проверяем активна ли фотка
+                    return;
+
+                foto.addClass("active").siblings(".foto-spec").removeClass("active");//  присваиваем актив при наведении на фото, убираем актив со всех остальных
+                box_text.addClass("active").siblings(".comment-text").removeClass("active");// присваиваем актив тексту
+            });
+            var reposWorks = function () {
+                var workSize = 1600;
+                var box = $('#works-box');
+                var ww = $(window).width();
+
+                if(ww >= workSize){
+                    box.find('table').css('left', 0);
+                }else{
+                    var offset = (ww - workSize) / 2;
+                    box.find('table').css('left', offset);
+                }
+            };
+
+            reposWorks();
+            $(window).resize(reposWorks);
         });
-    });
-    function sliderJS (param, slide) { // slider function
-        var ul = $(slide).find(".header-text"); // находим блок
-        var bl = $(slide).find(".header-p"); // находим любой из элементов блока
-        var step = $(bl).width(); // ширина объекта
-        (ul).animate({marginLeft: "-"+step*param}, 400); // 500 это скорость перемотки
-    }
-    $(document).on("click", ".slider .nav span", function() { // slider click navigate
-        var sl = $(this).closest(".slider"); // находим, в каком блоке был клик
-        (sl).find("span").removeClass("on"); // убираем активный элемент
-        $(this).addClass("on"); // делаем активным текущий
-        var param = $(this).attr("rel"); // узнаем его номер
-        sliderJS(param, sl); // слайдим
-        return false;
-    });
-    $(document).ready(function() {
-        $(".foto-spec").hover(function (){
-            var foto = $(this); //переменная с фоткой
-            var cor = foto.index(); //создаем кореляцию по номерам
-            var box_text = $(".comment-text:eq("+cor+")");//выводим текст по номеру foto
-
-            if (foto.hasClass("active"))// проверяем активна ли фотка
-                return;
-
-            foto.addClass("active").siblings(".foto-spec").removeClass("active");//  присваиваем актив при наведении на фото, убираем актив со всех остальных
-            box_text.addClass("active").siblings(".comment-text").removeClass("active");// присваиваем актив тексту
+        function sliderJS (param, slide) { // slider function
+            var ul = $(slide).find(".header-text"); // находим блок
+            var bl = $(slide).find(".header-p"); // находим любой из элементов блока
+            var step = $(bl).width(); // ширина объекта
+            (ul).animate({marginLeft: "-"+step*param}, 400); // 500 это скорость перемотки
+        }
+        $(document).on("click", ".slider .nav span", function() { // slider click navigate
+            var sl = $(this).closest(".slider"); // находим, в каком блоке был клик
+            (sl).find("span").removeClass("on"); // убираем активный элемент
+            $(this).addClass("on"); // делаем активным текущий
+            var param = $(this).attr("rel"); // узнаем его номер
+            sliderJS(param, sl); // слайдим
+            return false;
         });
-    });
-
     </script>
 </div>
 </body>

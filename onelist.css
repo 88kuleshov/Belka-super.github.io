@@ -446,7 +446,9 @@ body {
 .contain-img-works {
     max-width: 1600px;
     margin: auto;
-    max-height: 400px;
+    height: 440px;
+    position: relative;
+    overflow: hidden;
 }
 .contain-text-works .header-serif {
     display: inline-block;
@@ -465,13 +467,12 @@ body {
     border-color: rgb(0, 224, 208);
 }
 .works {
-    max-width: 1600px;
-    max-height: 400px;
+    width: 1600px;
+    height: 400px;
     border-collapse: collapse;
     line-height:0;
     table-layout: fixed;
-
-
+    position: absolute;
 }
 .works tr {
     max-width: calc(100%/6);

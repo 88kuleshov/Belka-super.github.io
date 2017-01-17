@@ -372,6 +372,7 @@ body {
 .spec{
     float:left;
     width: 220px;
+    min-width:50px;
     height: 100%;
     margin-right: 12px;
     border: 3px solid gray;
@@ -815,16 +816,6 @@ textarea {
     font-family: "Roboto", sans-serif;
     word-spacing: 2px;
     line-height: 20px;
-}
-.telefon a {
-    font-family: "Roboto", sans-serif;
-    word-spacing: 2px;
-    line-height: 20px;
-    font-size: 14px;
-    color:rgb(255, 255, 255) ;
-    height: 14px;
-    cursor: pointer;
-    text-decoration: none;
 }
 .subscribe {
     float: left;
